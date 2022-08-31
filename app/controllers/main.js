@@ -41,7 +41,7 @@ function addUser(user) {
       console.log(error);
     });
 }
-//Request API để xoá sản phẩm 
+//Request API để xoá user 
 function deleteUser(userId) {
   apiDeleteUser(userId)
     .then(() => {
@@ -52,6 +52,7 @@ function deleteUser(userId) {
       console.log(error);
     });
 }
+//Request API để update user 
 
 function updateUser(userId, user) {
   apiUpdateUser(userId, user)
@@ -122,15 +123,15 @@ function resetForm() {
 
   dom("#TaiKhoan").disabled = false;
 }
-//////////////////DOM//////////////////////////////////
-/* Add */
+//======================== DOM  ======================= 
+// Add user 
 dom("#btnThemNguoiDung").addEventListener("click", () => {
   dom(".modal-title").innerHTML = "Thêm Người Dùng";
   dom(".modal-footer").innerHTML = `
     <button class='btn btn-secondary' data-dismiss='modal'>Hủy</button>
     <button class='btn btn-primary' data-type='add'>Thêm</button>
     `;
-  /* ResetForm */
+// Reset Form 
   resetForm();
 });
 
@@ -169,7 +170,7 @@ dom(".modal-footer").addEventListener("click", (evt) => {
   }
 });
 
-/* Xóa và Cập Nhật */
+// Xóa và Cập Nhật
 
 dom("#tblDanhSachNguoiDung").addEventListener("click", (evt) => {
   let id = evt.target.getAttribute("data-id");
@@ -211,9 +212,7 @@ dom("#search").addEventListener("keydown", (evt) => {
   GetUsers(evt.target.value);
 });
 
-////////////////////////////////////////////////////////////////////////
-
-/* Validation */
+//================= VALIDATION ====================
 
 function ValidateForm(type) {
   let isValid = true;

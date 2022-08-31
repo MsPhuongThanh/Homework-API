@@ -1,4 +1,4 @@
-/* Kiểm tra tài khoản */
+// Validate ID 
 function ValidateID() {
     let taikhoan = dom("#TaiKhoan").value;
     let spanEl = dom("#InputAccount");
@@ -21,7 +21,7 @@ function ValidateID() {
     spanEl.innerHTML = "";
     return true;
   }
-  /* Check tài khoản giống nhau */
+// Check tài khoản giống nhau
   function ValidatecheckID(taikhoan) {
     let spanEl = dom("#InputAccount");
     let findId = users.find((user) =>{
@@ -35,7 +35,7 @@ function ValidateID() {
     return true
   }
   
-  /* Kiểm tra họ tên */
+  // Validate Name 
   
   function ValidateName() {
     let name = dom("#HoTen").value;
@@ -58,7 +58,7 @@ function ValidateID() {
     return true;
   }
   
-  /* Kiểm Tra Mật Khẩu */
+//Validate Password 
   function ValidatePassword() {
     let password = dom("#MatKhau").value;
     let spanEl = dom("#InputPassword");
@@ -78,7 +78,7 @@ function ValidateID() {
     spanEl.innerHTML = "";
     return true;
   }
-  /* Kiểm Tra Email */
+  // Validate Email 
   function ValidateEmail() {
     let email = dom("#Email").value;
     let spanEl = dom("#InputEmail");
@@ -98,7 +98,7 @@ function ValidateID() {
     spanEl.innerHTML = "";
     return true;
   }
-  /* Kiểm tra hình ảnh */
+ // Validate Image 
   function ValidateImage() {
     let image = dom("#HinhAnh").value;
     let spanEl = dom("#InputImage");
@@ -112,7 +112,7 @@ function ValidateID() {
     spanEl.innerHTML = "";
     return true;
   }
-  /* Kiểm tra chức vự */
+// Validate Role 
   function ValidateRole() {
     let loaiND = dom("#loaiNguoiDung").value;
     let spanEl = dom("#InputUser");
@@ -130,7 +130,7 @@ function ValidateID() {
     spanEl.innerHTML = "";
     return true;
   }
-  /* Kiểm tra Ngôn Ngữ */
+// Validate Language 
   function ValidateLanguage() {
     let ngonngu = dom("#loaiNgonNgu").value;
     let spanEl = dom("#SelectLanguage");
@@ -147,7 +147,7 @@ function ValidateID() {
     spanEl.innerHTML = "";
     return true;
   }
-  /* Kiểm tra Mô tả */
+// Validate Description 
   function ValidateDescription(){
     let mota = dom('#MoTa').value
     let spanEl = dom('#InputDescription')
